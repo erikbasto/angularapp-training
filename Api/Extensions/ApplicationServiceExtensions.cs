@@ -1,4 +1,5 @@
-﻿using Api.Data;
+﻿using System;
+using Api.Data;
 using Api.Interfaces;
 using Api.Services;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,8 @@ namespace Api.Extensions
 
             services.AddCors();
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             return services;
         }
