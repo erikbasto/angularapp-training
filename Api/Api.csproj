@@ -21,11 +21,15 @@
     <None Remove="Interfaces\" />
     <None Remove="Services\" />
     <None Remove="Extensions\" />
+    <None Remove="Errors\" />
+    <None Remove="Middleware\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Services\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Errors\" />
+    <Folder Include="Middleware\" />
   </ItemGroup>
 </Project>
