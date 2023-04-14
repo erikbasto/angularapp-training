@@ -22,7 +22,7 @@ builder.Services.AddIdentityServices(builder.Configuration);
 var app = builder.Build();
 
 app.UseMiddleware<ExceptionMiddleware>();
-app.UseCors(builder => builder.AllowAnyHeader().WithOrigins("https://localhost:4200"));
+app.UseCors(builder => builder.AllowAnyMethod().AllowAnyHeader().WithOrigins("https://localhost:4200"));
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
