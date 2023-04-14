@@ -34,12 +34,12 @@ namespace Api.Controllers
             return Ok(users);
         }
         
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         public async Task<ActionResult<MemberDto>> GetUser(int id)
         {
             var user = await _repository.GetUserByIdAsync(id);
             return _mapper.Map<MemberDto>(user);
-        }
+        }*/
 
 
         [HttpGet("{name}")]
