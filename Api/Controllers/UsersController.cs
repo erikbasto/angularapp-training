@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using Api.Data;
 using Api.DTOs;
 using Api.Entities;
 using Api.Extensions;
@@ -12,7 +9,6 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -41,7 +37,7 @@ namespace Api.Controllers
         public async Task<ActionResult<PagedList<MemberDto>>> GetUsers([FromQuery] UserParams userParams)
         {
             var currentUser = await _repository.GetUserByUsernameAsync(User.GetUsername());
-            userParams.CurrentUsername = currentUser.Username;
+            userParams.CurrentUsername = currentUser.UserName;
 
             if (string.IsNullOrWhiteSpace(userParams.Gender))
             {
@@ -103,7 +99,7 @@ namespace Api.Controllers
             user.Photos.Add(photo);
             if (await _repository.SaveAllAsync())
             {
-                return CreatedAtAction(nameof(GetUsers),new { username = user.Username},  _mapper.Map<PhotoDto>(photo));
+                return CreatedAtAction(nameof(GetUsers),new { username = user.UserName},  _mapper.Map<PhotoDto>(photo));
             }
             return BadRequest("Problem adding photo");
         }

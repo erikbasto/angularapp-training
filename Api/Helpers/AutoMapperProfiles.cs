@@ -12,12 +12,14 @@ namespace Api.Helpers
 		{
 			CreateMap<AppUser, MemberDto>()
 				.ForMember(dest => dest.PhotoUrl, opt => opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url))
-				.ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.DateOfBirth.CalculateAge()));
+				.ForMember(dest => dest.Age, opt => opt.MapFrom(src => src.DateOfBirth.CalculateAge()))
+				.ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.UserName));
 
 			CreateMap<Photo, PhotoDto>();
 			CreateMap<MemberUpdateDto, AppUser>();
-            CreateMap<RegisterDto, AppUser>();
-			CreateMap<Message, MessageDto>()
+            CreateMap<RegisterDto, AppUser>()
+                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Username));
+            CreateMap<Message, MessageDto>()
 				.ForMember(dest => dest.RecipientPhotoUrl, opt => opt.MapFrom(src => src.Recipient.Photos.FirstOrDefault(x => x.IsMain).Url))
 				.ForMember(dest => dest.SenderPhotoUrl, opt => opt.MapFrom(src => src.Sender.Photos.FirstOrDefault(x => x.IsMain).Url));
         }

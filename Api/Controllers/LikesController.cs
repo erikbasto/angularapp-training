@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Api.DTOs;
 using Api.Entities;
 using Api.Extensions;
@@ -34,7 +31,7 @@ namespace Api.Controllers
 
             if (likedUser == null) return NotFound();
 
-            if (sourceUser.Username == username) return BadRequest("You cannot like yourself");
+            if (sourceUser.UserName == username) return BadRequest("You cannot like yourself");
 
             var userLike = await _likesRepository.GetUserLike(sourceUserId, likedUser.Id);
             if (userLike != null) return BadRequest("You already like this user");

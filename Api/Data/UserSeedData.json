@@ -1,6 +1,6 @@
 ﻿[
   {
-    "Username": "Callahan",
+    "UserName": "Callahan",
     "Gender": "male",
     "DateOfBirth": "1967-06-22",
     "KnownAs": "Callahan",
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "Username": "Briggs",
+    "UserName": "Briggs",
     "Gender": "male",
     "DateOfBirth": "1954-09-25",
     "KnownAs": "Briggs",
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "Username": "Hensley",
+    "UserName": "Hensley",
     "Gender": "male",
     "DateOfBirth": "1984-06-05",
     "KnownAs": "Hensley",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "Username": "Woods",
+    "UserName": "Woods",
     "Gender": "male",
     "DateOfBirth": "1990-09-03",
     "KnownAs": "Woods",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "Username": "Lane",
+    "UserName": "Lane",
     "Gender": "male",
     "DateOfBirth": "1970-08-31",
     "KnownAs": "Lane",
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "Username": "Hopkins",
+    "UserName": "Hopkins",
     "Gender": "male",
     "DateOfBirth": "1998-10-07",
     "KnownAs": "Hopkins",
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "Username": "Morgan",
+    "UserName": "Morgan",
     "Gender": "male",
     "DateOfBirth": "1969-02-22",
     "KnownAs": "Morgan",
@@ -133,7 +133,7 @@
     ]
   },
   {
-    "Username": "Deleon",
+    "UserName": "Deleon",
     "Gender": "male",
     "DateOfBirth": "1998-03-14",
     "KnownAs": "Deleon",
@@ -152,7 +152,7 @@
     ]
   },
   {
-    "Username": "Hickman",
+    "UserName": "Hickman",
     "Gender": "male",
     "DateOfBirth": "1980-12-18",
     "KnownAs": "Hickman",
@@ -171,7 +171,7 @@
     ]
   },
   {
-    "Username": "Kramer",
+    "UserName": "Kramer",
     "Gender": "male",
     "DateOfBirth": "1954-03-23",
     "KnownAs": "Kramer",
