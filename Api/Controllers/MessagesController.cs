@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Api.DTOs;
 using Api.Entities;
@@ -43,8 +41,8 @@ namespace Api.Controllers
             {
                 Sender = sender,
                 Recipient = recipient,
-                SenderUsername = sender.Username,
-                RecipientUsername = recipient.Username,
+                SenderUsername = sender.UserName,
+                RecipientUsername = recipient.UserName,
                 Content = createMessageDto.Content
             };
 

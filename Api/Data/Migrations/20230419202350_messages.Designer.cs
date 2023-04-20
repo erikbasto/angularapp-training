@@ -12,7 +12,9 @@ namespace Api.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
     [Migration("20230419202350_messages")]
+#pragma warning disable CS8981 // El nombre de tipo solo contiene caracteres ASCII en minúsculas. Estos nombres pueden reservarse para el idioma.
     partial class messages
+#pragma warning restore CS8981 // El nombre de tipo solo contiene caracteres ASCII en minúsculas. Estos nombres pueden reservarse para el idioma.
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

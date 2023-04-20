@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Api.DTOs;
 using Api.Entities;
@@ -26,7 +25,7 @@ namespace Api.Data
 
         public async Task<PagedList<LikeDto>> GetUserLikes(LikesParams likesParams)
         {
-            var users = _context.Users.OrderBy(u => u.Username).AsQueryable();
+            var users = _context.Users.OrderBy(u => u.UserName).AsQueryable();
             var likes = _context.Likes.AsQueryable();
 
             if(likesParams.Predicate == "liked")
@@ -43,7 +42,7 @@ namespace Api.Data
 
             var likedUsers = users.Select(user => new LikeDto
             {
-                Username = user.Username,
+                Username = user.UserName,
                 KnowAs = user.KnownAs,
                 Age = user.DateOfBirth.CalculateAge(),
                 PhotoUrl = user.Photos.FirstOrDefault(x => x.IsMain).Url,
