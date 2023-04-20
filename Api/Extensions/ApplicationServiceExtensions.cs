@@ -25,6 +25,7 @@ namespace Api.Extensions
             services.Configure<CloudinarySettings>(configuration.GetSection("CloudinarySettings"));
             services.AddScoped<IPhotoService, PhotoService>();
             services.AddScoped<ILikesRepository, LikesRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
             services.AddScoped<LogUserActivity>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
