@@ -3,6 +3,7 @@ using Api.Data;
 using Api.Helpers;
 using Api.Interfaces;
 using Api.Services;
+using Api.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +30,9 @@ namespace Api.Extensions
             services.AddScoped<LogUserActivity>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.AddSignalR();
+            services.AddSingleton<PresenceTracker>();
 
             return services;
         }

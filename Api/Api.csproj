@@ -27,6 +27,7 @@
     <None Remove="Errors\" />
     <None Remove="Middleware\" />
     <None Remove="Helpers\" />
+    <None Remove="SignalR\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -36,5 +37,6 @@
     <Folder Include="Errors\" />
     <Folder Include="Middleware\" />
     <Folder Include="Helpers\" />
+    <Folder Include="SignalR\" />
   </ItemGroup>
 </Project>
