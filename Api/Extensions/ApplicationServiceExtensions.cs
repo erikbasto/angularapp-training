@@ -20,13 +20,13 @@ namespace Api.Extensions
             });
 
             services.AddCors();
-
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ITokenService, TokenService>();
-            services.AddScoped<IUserRepository, UserRepository>();
+           // services.AddScoped<IUserRepository, UserRepository>();
             services.Configure<CloudinarySettings>(configuration.GetSection("CloudinarySettings"));
             services.AddScoped<IPhotoService, PhotoService>();
-            services.AddScoped<ILikesRepository, LikesRepository>();
-            services.AddScoped<IMessageRepository, MessageRepository>();
+           // services.AddScoped<ILikesRepository, LikesRepository>();
+           // services.AddScoped<IMessageRepository, MessageRepository>();
             services.AddScoped<LogUserActivity>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
